@@ -2,18 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Cut Cake</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="page2">
-  <div class="centered">
-    <img src="assets/cake.png" alt="Cake" class="cake" onclick="goToFinal()" />
-    <p class="click-me">Click Me</p>
-  </div>
-  <script>
-    function goToFinal() {
-      window.location.href = "final.html";
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Surprise</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: 'Arial', sans-serif;
+      background-color: white;
+      color: black;
+      text-align: center;
     }
-  </script>
+
+    .message {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .cake {
+      margin-top: 3rem;
+      cursor: pointer;
+    }
+
+    .click-me {
+      margin-top: 1rem;
+      font-family: monospace;
+      font-size: 1.2rem;
+    }
+
+    img {
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    Yo di keeping the tradition alive not wishing on the day of birthday, well actually this took longer then expected hehe so yeah here is a special message in my style less words more love and care thank you for being there i know those are some few moments but those moments means a lot to me. And thankyou for making me understand that I'm good talker, i can talk to, people don't call me and they just put the blame on me that I don't talk to them, or i have changed. Because of you i learnt that you just someone to talk who talks with you. <br><br>
+
+    May you have wonderful year all your wishes come true and yeah that too finger crossed 🤞 for you, you look the best when you smile 😁. You will always be white witch 🪄🪄🪄 for me
+  </div>
+
+  <div class="cake" onclick="window.location.href='page3.html'">
+    <img src="assets/cake.png" alt="Birthday Cake">
+    <div class="click-me">Click Me</div>
+  </div>
 </body>
 </html>
