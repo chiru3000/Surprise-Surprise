@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HELLO</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Happy Birthday 🎉</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: #fff5f5;
+      background: white;
       font-family: sans-serif;
       display: flex;
       flex-direction: column;
@@ -17,40 +17,39 @@
       justify-content: center;
     }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .knife {
+      width: 100px;
+      margin-top: 20px;
+      cursor: pointer;
     }
 
     .arrow {
-      font-size: 48px;
-      margin-bottom: 40px;
+      font-size: 24px;
       animation: bounce 1s infinite;
+      margin-top: 10px;
+    }
+
+    .click-it {
+      font-size: 18px;
+      margin-top: 5px;
     }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
-
-    .knife {
-      width: 100px;
-      height: auto;
-      cursor: pointer;
-    }
-
-    .click-text {
-      margin-top: 10px;
-      font-size: 18px;
-    }
   </style>
 </head>
-<body>
+<body onclick="goToCut()">
   <h1>HELLO</h1>
   <div class="arrow">⬇️</div>
-  <a href="cut.html">
-    <img src="assets/knife.png" alt="Knife" class="knife">
-    <div class="click-text">click it</div>
-  </a>
+  <img src="assets/knife.png" class="knife" alt="knife icon" />
+  <div class="click-it">click it</div>
+
+  <script>
+    function goToCut() {
+      window.location.href = "cut.html";
+    }
+  </script>
 </body>
 </html>
