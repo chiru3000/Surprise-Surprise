@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: white;
+      font-family: monospace;
+      overflow: auto;
+    }
+
+    .ascii-container {
+      max-width: fit-content;
+      margin: 80px auto 20px auto;
+      text-align: center;
+      white-space: pre;
+      line-height: 6px;
+      font-size: 5px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .byline {
+      position: fixed;
+      bottom: 5px;
+      right: 15px;
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ascii-container">
+    <h1>-- HAPPY BIRTHDAY! --</h1>
+    <div id="asciiArt"></div>
+    <div class="footer">✨ Beautiful Cool Smart Di ✨</div>
+  </div>
+
+  <div class="byline">by Chirag</div>
+
+  <!-- ✅ Autoplaying background music -->
+  <audio autoplay loop>
+    <source src="assets/birthday_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    fetch("assets/super_highres_ascii_plain.txt")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("asciiArt").textContent = data;
+      });
+  </script>
+</body>
+</html>
